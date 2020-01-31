@@ -12,25 +12,13 @@ export default class PostService {
         return res.json()
     }
 
-    getAllPosts = async () => {
-        const res = await this.getResource('/posts')
-        return res
-    }
+    getAllPosts = async () =>  await this.getResource('/posts')
 
-    getPost = async (id) => {
-        const res = await this.getResource(`/posts/${id}`)
-        return res
-    }
+    getPost = async (id) => await this.getResource(`/posts/${id}`)
 
-    getPostAndComments = async (id) => {
-        const res = await this.getResource(`/posts/${id}?_embed=comments`)
-        return res
-    }
+    getPostAndComments = async (id) => await this.getResource(`/posts/${id}?_embed=comments`)
 
-    getComments = async () => {
-        const res = await this.getResource('/comments')
-        return res
-    }
+    getComments = async () => await this.getResource('/comments')
 
     createPost = async (post) => {
         const requestOptions = {
@@ -71,7 +59,7 @@ export default class PostService {
             },
             body: JSON.stringify(changedPost),
             redirect: 'follow'
-        };
+        }
 
         await fetch(`${this._apiBase}/posts/${id}`, requestOptions)
             .then(response => response.text())
@@ -90,6 +78,6 @@ export default class PostService {
 
         await fetch(`${this._apiBase}/posts/${id}`, requestOptions)
             .then(response => response.text())
-            .catch(error => console.log('error', error));
+            .catch(error => console.log('error', error))
     }
 }

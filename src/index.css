@@ -1,4 +1,4 @@
-@import url('./libraries/bootstrap.min.css');
+@import url('~bootswatch/dist/flatly/bootstrap.min.css');
 
 body, #root {
     width: 100%;

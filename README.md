@@ -1,3 +1,21 @@
+##How to install
+
+```sh
+- Clone this repository on your PC
+- run `yarn install`
+- run `yarn start`
+```
+
+### Structure
+
+- **node_modules** - libraries.
+- **public** - include favicon, index.html and some images.
+- **src** - source files.
+- **components** - include all components project.
+- **services** -  Has all the requests (get, post, update and delete), working with api.
+- **index.js** - main file, for start app.
+
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
