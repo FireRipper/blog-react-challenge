@@ -1,4 +1,4 @@
-##How to install
+## How to install
 
 ```sh
 - Clone this repository on your PC
